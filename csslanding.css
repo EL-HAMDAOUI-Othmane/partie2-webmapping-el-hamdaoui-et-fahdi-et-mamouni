@@ -1,0 +1,146 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Landing Page Container */
+.landing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.landing-container:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+header h2 {
+    font-size: 1.8em; /* Increased size for better readability */
+    font-weight: 400; /* Medium weight */
+    margin-bottom: 25px; /* Slightly more spacing */
+    animation: fadeInUp 1.8s ease-out;
+}
+
+header p {
+    font-size: 1.25em;
+    font-weight: 300;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s ease-out;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.cta-button {
+    padding: 18px 36px;
+    font-size: 1.2em;
+    font-weight: 600;
+    background-color: #ff5e57;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #fff;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+}
+
+.cta-button:hover {
+    background-color: #ff7b5a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    transition: transform 0.2s ease;
+}
+
+.cta-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-container {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    header h2 {
+        font-size: 1.6em; /* Adjusted size for smaller screens */
+    }
+
+    .cta-button {
+        padding: 14px 28px;
+        font-size: 1.1em;
+    }
+
+    .cta-buttons {
+        gap: 20px;
+    }
+}
